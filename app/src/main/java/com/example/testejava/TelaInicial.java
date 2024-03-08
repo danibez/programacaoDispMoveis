@@ -5,6 +5,7 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.SearchManager;
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -24,11 +25,14 @@ public class TelaInicial extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         incrementaValor();
+
     }
 
     private void incrementaValor() {
         Button button = (Button) findViewById(R.id.incrementa);
         Button tele = (Button) findViewById(R.id.tele);
+        Button voltar = (Button) findViewById(R.id.back);
+        Button alarme = (Button) findViewById(R.id.alarme);
         TextView texto = (TextView) findViewById(R.id.texto);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -41,15 +45,33 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
 
-        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
-                .putExtra(AlarmClock.EXTRA_MESSAGE, "ACORDA!!!")
-                .putExtra(AlarmClock.EXTRA_HOUR, 20)
-                .putExtra(AlarmClock.EXTRA_MINUTES, 0);
+        Intent i = new Intent(Intent.ACTION_DIAL);
+        i.setData(Uri.parse("tel:81923843823"));
 
         tele.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                startActivity(i);
+
+            }
+        });
+
+        Intent intent = new Intent(AlarmClock.ACTION_SET_ALARM)
+                .putExtra(AlarmClock.EXTRA_MESSAGE, "Meu alarme")
+                .putExtra(AlarmClock.EXTRA_HOUR, 19)
+                .putExtra(AlarmClock.EXTRA_MINUTES, 10);
+
+        alarme.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 startActivity(intent);
+            }
+        });
+
+        voltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

@@ -23,15 +23,14 @@ public class Login extends AppCompatActivity {
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         TextView usuario = (TextView) findViewById(R.id.emailField);
         TextView senha = (TextView) findViewById(R.id.senhaField);
-        Intent intentE = new Intent(this, TelaInicial.class);
+
+        Intent intent = new Intent(this, TelaInicial.class);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                String s = usuario.getText().toString() + " " + senha.getText().toString();
-//                Toast.makeText(Login.this, s, Toast.LENGTH_LONG).show();
+                startActivity(intent);
 
-                startActivity(intentE);
             }
         });
     }
