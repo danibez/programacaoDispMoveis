@@ -33,6 +33,7 @@ public class TelaInicial extends AppCompatActivity {
         Button tele = (Button) findViewById(R.id.tele);
         Button voltar = (Button) findViewById(R.id.back);
         Button alarme = (Button) findViewById(R.id.alarme);
+        Button next = (Button) findViewById(R.id.next);
         TextView texto = (TextView) findViewById(R.id.texto);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -72,6 +73,14 @@ public class TelaInicial extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        Intent intentNext = new Intent(this, Perfil.class);
+        next.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentNext);
             }
         });
     }

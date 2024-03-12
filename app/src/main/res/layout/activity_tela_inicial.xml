@@ -53,10 +53,10 @@
       android:text="Voltar"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="@+id/incrementa"
-      app:layout_constraintHorizontal_bias="0.672"
+      app:layout_constraintHorizontal_bias="0.439"
       app:layout_constraintStart_toStartOf="@+id/incrementa"
       app:layout_constraintTop_toBottomOf="@+id/incrementa"
-      app:layout_constraintVertical_bias="0.497" />
+      app:layout_constraintVertical_bias="0.237" />
 
   <Button
       android:id="@+id/alarme"
@@ -65,6 +65,16 @@
       android:text="Alarme"
       app:layout_constraintBottom_toBottomOf="parent"
       app:layout_constraintEnd_toEndOf="@+id/tele"
+      app:layout_constraintHorizontal_bias="1.0"
       app:layout_constraintStart_toStartOf="@+id/tele"
-      app:layout_constraintTop_toBottomOf="@+id/tele" />
+      app:layout_constraintTop_toBottomOf="@+id/tele"
+      app:layout_constraintVertical_bias="0.281" />
+
+  <Button
+      android:id="@+id/next"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Next"
+      tools:layout_editor_absoluteX="151dp"
+      tools:layout_editor_absoluteY="499dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
