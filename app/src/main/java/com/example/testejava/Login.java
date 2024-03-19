@@ -24,7 +24,7 @@ public class Login extends AppCompatActivity {
         TextView usuario = (TextView) findViewById(R.id.emailField);
         TextView senha = (TextView) findViewById(R.id.senhaField);
 
-        Intent intent = new Intent(this, TelaInicial.class);
+        Intent intent = new Intent(this, TelaVideo.class);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
