@@ -2,9 +2,7 @@ package com.example.testejava;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
-import androidx.activity.result.contract.ActivityResultContract;
 import androidx.activity.result.contract.ActivityResultContracts;
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.net.Uri;
@@ -20,7 +18,7 @@ public class Perfil extends AppCompatActivity {
             new ActivityResultCallback<Uri>() {
                 @Override
                 public void onActivityResult(Uri uri){
-                    ImageView avatar = (ImageView) findViewById(R.id.avatar);
+                    ImageView avatar = (ImageView) findViewById(R.id.fotoperfil);
                     avatar.setImageURI(uri);
                 }
     });

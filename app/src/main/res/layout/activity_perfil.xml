@@ -7,7 +7,7 @@
     tools:context=".Perfil">
 
     <ImageView
-        android:id="@+id/avatar"
+        android:id="@+id/fotoperfil"
         android:layout_width="123dp"
         android:layout_height="90dp"
         android:src="@mipmap/avatar"
