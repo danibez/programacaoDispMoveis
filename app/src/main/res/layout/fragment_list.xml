@@ -1,21 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5DC"
-    tools:context="com.example.testejava.Fragment1">
+    tools:context=".ListFrag">
 
     <!-- TODO: Update blank fragment layout -->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <TextView
-            android:layout_width="212dp"
-            android:layout_height="128dp"
+            android:id="@+id/textView"
+            android:layout_width="241dp"
+            android:layout_height="58dp"
             android:text="@string/hello_blank_fragment"
-            android:textSize="34sp"
+            android:textSize="24sp"
             app:layout_constraintBottom_toTopOf="@+id/bfrag"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
