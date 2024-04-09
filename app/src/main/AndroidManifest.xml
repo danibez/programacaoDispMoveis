@@ -24,10 +24,13 @@
         android:theme="@style/Theme.TesteJava"
         tools:targetApi="31">
         <activity
-            android:name=".telaLayout"
+            android:name=".CameraLoadPicture"
             android:exported="false" />
         <activity
-            android:name=".camera"
+            android:name=".CameraPreview"
+            android:exported="false" />
+        <activity
+            android:name=".telaLayout"
             android:exported="false" />
         <activity
             android:name=".TelaVideo"
