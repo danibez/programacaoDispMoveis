@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
 
     <uses-feature android:name="android.hardware.camera.any" />
+    <uses-feature android:name="android.hardware.camera" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
@@ -24,12 +25,7 @@
         tools:targetApi="31">
         <activity
             android:name=".Feed"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
         <activity
             android:name=".FragmentInitial"
@@ -40,7 +36,10 @@
             android:name=".telaLayout"
             android:exported="false" />
         <activity
-            android:name=".camera"
+            android:name=".CameraLoadPicture"
+            android:exported="false" />
+        <activity
+            android:name=".CameraPreview"
             android:exported="false" />
         <activity
             android:name=".TelaVideo"
@@ -53,7 +52,13 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="false" />
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
     </application>
 
 </manifest>
