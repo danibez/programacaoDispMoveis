@@ -50,4 +50,6 @@ dependencies {
     implementation("androidx.activity:activity-ktx:1.8.2")
     implementation("androidx.fragment:fragment-ktx:1.6.2")
     implementation("com.google.android.material:material:1.11.0")
+    implementation("com.github.parse-community.Parse-SDK-Android:parse:1.26.0")
+    implementation("com.github.parse-community:ParseLiveQuery-Android:1.2.2")
 }

@@ -39,8 +39,6 @@ public class CameraPreview extends AppCompatActivity {
         previewView = (PreviewView)findViewById(R.id.previewView);
         Button bFoto = (Button) findViewById(R.id.cameraAct);
 
-
-
         cameraProviderFuture.addListener(() -> {
             try {
                 ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
@@ -85,7 +83,7 @@ public class CameraPreview extends AppCompatActivity {
                 .build();
 
         CameraSelector cameraSelector = new CameraSelector.Builder()
-                .requireLensFacing(CameraSelector.LENS_FACING_FRONT)
+                .requireLensFacing(CameraSelector.LENS_FACING_BACK)
                 .build();
 
         imageCapture = new ImageCapture.Builder()

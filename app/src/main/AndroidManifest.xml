@@ -7,6 +7,9 @@
     <uses-feature android:name="android.hardware.camera.any" />
     <uses-feature android:name="android.hardware.camera" />
 
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission
@@ -24,14 +27,26 @@
         android:theme="@style/Theme.TesteJava"
         tools:targetApi="31">
         <activity
-            android:name=".Feed"
-            android:exported="false">
-        </activity>
-        <activity
-            android:name=".FragmentInitial"
-            android:exported="false">
+            android:name=".backLiveConnection"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
+        <activity
+            android:name=".BackConnection"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".Feed"
+            android:exported="false" />
+        <activity
+            android:name=".FragmentInitial"
+            android:exported="false" />
         <activity
             android:name=".telaLayout"
             android:exported="false" />
@@ -52,13 +67,17 @@
             android:exported="false" />
         <activity
             android:name=".Login"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+            android:exported="false"></activity>
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="@string/back4app_server_url" />
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="@string/back4app_app_id" />
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="@string/back4app_client_key" />
     </application>
 
 </manifest>

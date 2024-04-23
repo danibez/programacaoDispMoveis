@@ -1,9 +1,12 @@
 <resources>
-    <string name="app_name">Log In</string>
+    <string name="app_name">LiveConn</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">APPLICATION_ID</string>
+    <string name="back4app_client_key">CLIENT_KEY</string>
 </resources>
