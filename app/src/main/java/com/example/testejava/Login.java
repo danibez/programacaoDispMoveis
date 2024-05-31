@@ -18,7 +18,7 @@ public class Login extends AppCompatActivity {
         signInBtn();
     }
 
-    private void signInBtn() {
+    public void signInBtn() {
         Button loginBtn = (Button) findViewById(R.id.loginBtn);
         TextView usuario = (TextView) findViewById(R.id.emailField);
         TextView senha = (TextView) findViewById(R.id.senhaField);

@@ -29,8 +29,6 @@ public class backLiveConnection extends AppCompatActivity {
                         .server(getString(R.string.back4app_server_url))
                         .build());
 
-
-
         parseLiveQueryClient = ParseLiveQueryClient.Factory.getClient();
 
         SubscriptionHandling subscriptionHandling = parseLiveQueryClient.subscribe(new ParseQuery<>("liveClass"));

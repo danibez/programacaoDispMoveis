@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/meuTexto"
             android:layout_width="241dp"
             android:layout_height="58dp"
             android:text="@string/hello_blank_fragment"
